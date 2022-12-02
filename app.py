@@ -5,10 +5,10 @@ It echoes any incoming text messages.
 """
 
 import logging
-
+import HTMLparser
 from aiogram import Bot, Dispatcher, executor, types
 
-API_TOKEN = '5814264971:AAEEqSF04Ko2wNQewmZZqYiV5uzpYTE8yWE'
+API_TOKEN = '989604812:AAE1NWU3CwhDfo41ucg80nE2aboimTmlDtQ'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -24,6 +24,27 @@ async def send_welcome(message: types.Message):
     This handler will be called when user sends `/start` or `/help` command
     """
     await message.reply("Hi!\nI'm EchoBot!\nPowered by aiogram.")
+
+
+
+@dp.message_handler(commands=['shuffle'])
+async def send_welcome(message: types.Message):
+    """
+    This handler will be called when user sends `/start` or `/help` command
+    """
+    
+    await message.answer(HTMLparser.shuffle())
+
+
+# You can use state '*' if you need to handle all states
+@dp.message_handler(commands='cancel')
+async def cancel_handler(message: types.Message):
+    """
+    Allow user to cancel any action
+    """
+    await message.reply('Cancelled.', reply_markup=types.ReplyKeyboardRemove())
+
+
 
 
 
