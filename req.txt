@@ -1,0 +1,5 @@
+
+await bot.send_message( message.chat.id, 
+                        md.link("google", "google.com"),
+                        parse_mode=ParseMode.MARKDOWN_V2
+                    )

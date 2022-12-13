@@ -15,7 +15,12 @@ def shuffle ():
     counter = 0
     table = soup.find(name='div', attrs={'class': 'canvas'})
     for row in table.findAll('div', attrs={'class': 'genre scanme'}):
-        href_list.update({row.text[:-2] : row['preview_url']})
+
+        href_list.update({row.text[:-2] : reminder(row.text[:-2])}) # row['preview_url']
+
+    # with open('genres.txt', 'w') as file:
+        
+    #     file.write(json.dumps(href_list, sort_keys=True, indent=2))
 
     rand_key = random.choice(list(href_list.keys()))
     print (rand_key)
@@ -30,9 +35,19 @@ def shuffle ():
         return (link.get('href'))
 
     return  
-# with open('file.txt', 'w') as file:
-#     file.write(json.dumps(href_list, sort_keys=True, indent=2))
-# print (random.choice(list(href_list.values())))
-    
 
-# def get_playlist ()    
+
+def reminder (name):
+    url = "https://everynoise.com/"
+   
+
+    url += 'engenremap-' + name.replace(' ','') +'.html'   
+
+    r = requests.get(url)
+    soup = BeautifulSoup(r.content, 'html.parser')
+
+    for link in soup.find_all('a', text = 'playlist'):
+        return (link.get('href'))
+
+
+# shuffle()

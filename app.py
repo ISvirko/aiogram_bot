@@ -33,7 +33,7 @@ async def send_welcome(message: types.Message):
     This handler will be called when user sends `/start` or `/help` command
     """
     
-    await message.answer(HTMLparser.shuffle())
+    await message.reply(HTMLparser.shuffle())
 
 
 # You can use state '*' if you need to handle all states
