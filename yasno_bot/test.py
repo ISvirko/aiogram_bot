@@ -1,11 +1,23 @@
-import random
+import json, req
 
-def get_device_status(device_ids: dict) -> dict:
-    # print (device_ids)
-    for key in device_ids:
-        device_ids[key] = random.choice(["OnLine", "OffLine","NotFound"])
-    # print (device_ids)
-    return device_ids
+import time
+from datetime import datetime, timedelta
 
-# nums = {"1515155631": "", "5615615":""}
-# print (get_device_status(nums))
+
+
+
+
+user_list = {}
+
+try:
+    with open("db.json", 'r') as read_file:
+        user_list = json.load(read_file)        
+except Exception as E:
+    print (E)
+
+
+id = "383621032"
+dev = user_list[id]["Devices"]
+dev.pop("5ccf7f0a0018")
+
+print (dev)

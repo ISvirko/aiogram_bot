@@ -1,0 +1,67 @@
+{
+  "272159252": {
+    "Devices": {
+      "5ccf7f0a0011": {
+        "Name": "Denis",
+        "last_time_online": "2023-01-03 15:28:46",
+        "online_from": "2023-01-03 06:08:22",
+        "status": "online",
+        "last_status": "online",
+        "last_time_offline": "2023-01-03 06:08:22",
+        "offline_from": "2023-01-02 21:17:13"
+      }
+    },
+    "AutoUpdate": 0
+  },
+  "476928592": {
+    "Devices": {
+      "5ccf7f0a0018": {
+        "Name": "Chaika",
+        "last_time_offline": "2023-01-03 09:57:34",
+        "offline_from": "2023-01-03 09:41:06",
+        "status": "online",
+        "last_status": "online",
+        "last_time_online": "2023-01-03 15:28:23",
+        "online_from": "2023-01-03 09:57:34"
+      },
+      "5ccf7f0a0011": {
+        "Name": "Denis",
+        "last_time_online": "2023-01-03 15:28:46",
+        "online_from": "2023-01-03 06:08:22",
+        "status": "online",
+        "last_status": "online",
+        "last_time_offline": "2023-01-03 06:08:22",
+        "offline_from": "2023-01-02 21:17:13"
+      }
+    },
+    "AutoUpdate": 1
+  },
+  "383621032": {
+    "Devices": {
+      "5ccf7f0a0013": {
+        "Name": "Jet",
+        "last_time_online": "2023-01-03 15:25:24",
+        "online_from": "2023-01-02 14:28:47",
+        "status": "online",
+        "last_status": "online",
+        "last_time_offline": "2023-01-02 14:28:47",
+        "offline_from": "2023-01-02 13:13:43"
+      }
+    },
+    "AutoUpdate": 1
+  },
+  "409341738": {
+    "Devices": {
+      "5ccf7f0a0018": {
+        "Name": "Chaika",
+        "last_time_online": "2023-01-03 15:28:23",
+        "online_from": "2023-01-03 09:57:34",
+        "status": "online",
+        "last_status": "online",
+        "last_time_offline": "2023-01-03 09:57:34",
+        "offline_from": "2023-01-03 09:41:06"
+      }
+    },
+    "AutoUpdate": 1
+  }
+}
